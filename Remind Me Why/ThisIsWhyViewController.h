@@ -7,7 +7,21 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
+#import <MediaPlayer/MediaPlayer.h>
 
-@interface ThisIsWhyViewController : UIViewController
+@interface ThisIsWhyViewController : UIViewController <MPMediaPickerControllerDelegate, MPMediaPlayback, MPPlayableContentDataSource, MPPlayableContentDelegate>
+
+@property (strong, nonatomic) NSString *reminderString;
+@property (strong, nonatomic) NSString *currentReminderType;
+@property (strong, nonatomic) UILabel *thisIsWhyLabel;
+@property (strong, nonatomic) UIImageView *thisIsWhyLabelBackground;
+@property (strong, nonatomic) UIImageView *bottomBar;
+@property (strong, nonatomic) UIButton *backButton;
+@property (strong, nonatomic) UIButton *nextButton;
+@property (strong, nonatomic) UIButton *playButton;
+@property (strong, nonatomic) MPMoviePlayerController *moviePlayer;
+@property (strong, nonatomic) UIImageView *reminderImageView;
+
 
 @end
