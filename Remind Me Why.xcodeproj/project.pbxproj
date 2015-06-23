@@ -28,6 +28,16 @@
 		D04EB0961AD3430800E57B02 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D04EB0951AD3430800E57B02 /* SettingsViewController.m */; };
 		D060213A1B39211400C383EF /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D06021391B39211400C383EF /* libz.dylib */; };
 		D060213C1B39211800C383EF /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D060213B1B39211800C383EF /* libsqlite3.dylib */; };
+		D06021471B39250000C383EF /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = D06021461B39250000C383EF /* InterfaceController.m */; };
+		D06021491B39250000C383EF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D06021481B39250000C383EF /* Images.xcassets */; };
+		D060214D1B39250000C383EF /* Remind Me Why WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = D060214C1B39250000C383EF /* Remind Me Why WatchKit App.app */; };
+		D06021551B39250000C383EF /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D06021531B39250000C383EF /* Interface.storyboard */; };
+		D06021571B39250000C383EF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D06021561B39250000C383EF /* Images.xcassets */; };
+		D060215A1B39250000C383EF /* Remind Me Why WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D06021411B39250000C383EF /* Remind Me Why WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D06021631B39259D00C383EF /* American Captain.otf in Resources */ = {isa = PBXBuildFile; fileRef = D06021621B39259D00C383EF /* American Captain.otf */; };
+		D06021641B39259D00C383EF /* American Captain.otf in Resources */ = {isa = PBXBuildFile; fileRef = D06021621B39259D00C383EF /* American Captain.otf */; };
+		D06021651B39259D00C383EF /* American Captain.otf in Resources */ = {isa = PBXBuildFile; fileRef = D06021621B39259D00C383EF /* American Captain.otf */; };
+		D06021661B39259D00C383EF /* American Captain.otf in Resources */ = {isa = PBXBuildFile; fileRef = D06021621B39259D00C383EF /* American Captain.otf */; };
 		D0A689B31AD209E10017F0A7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A689B21AD209E10017F0A7 /* main.m */; };
 		D0A689B61AD209E10017F0A7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A689B51AD209E10017F0A7 /* AppDelegate.m */; };
 		D0A689B91AD209E10017F0A7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A689B81AD209E10017F0A7 /* ViewController.m */; };
@@ -55,9 +65,27 @@
 		D0A68A001AD24EDD0017F0A7 /* RedButton.png in Resources */ = {isa = PBXBuildFile; fileRef = D0A689F01AD24EDD0017F0A7 /* RedButton.png */; };
 		D0A68A011AD24EDD0017F0A7 /* 3DRedButtonPressed.png in Resources */ = {isa = PBXBuildFile; fileRef = D0A689F11AD24EDD0017F0A7 /* 3DRedButtonPressed.png */; };
 		D0A68A021AD24EDD0017F0A7 /* lock-50.png in Resources */ = {isa = PBXBuildFile; fileRef = D0A689F21AD24EDD0017F0A7 /* lock-50.png */; };
+		D0D4B1961B3933DD00356A16 /* MediaToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0D4B1951B3933DD00356A16 /* MediaToolbox.framework */; };
+		D0D4B1981B3933E100356A16 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0D4B1971B3933E100356A16 /* CoreMedia.framework */; };
+		D0D4B19A1B3933ED00356A16 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0D4B1991B3933ED00356A16 /* CoreVideo.framework */; };
+		D0D4B19C1B3933F100356A16 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0D4B19B1B3933F100356A16 /* VideoToolbox.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		D060214E1B39250000C383EF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D0A689A51AD209E10017F0A7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D060214B1B39250000C383EF;
+			remoteInfo = "Remind Me Why WatchKit App";
+		};
+		D06021581B39250000C383EF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D0A689A51AD209E10017F0A7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D06021401B39250000C383EF;
+			remoteInfo = "Remind Me Why WatchKit Extension";
+		};
 		D0A689C71AD209E10017F0A7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D0A689A51AD209E10017F0A7 /* Project object */;
@@ -66,6 +94,20 @@
 			remoteInfo = "Remind Me Why";
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D06021611B39250000C383EF /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				D060215A1B39250000C383EF /* Remind Me Why WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		D03CDA451AD98A3600F25929 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "../../Downloads/parse-library/Bolts.framework"; sourceTree = "<group>"; };
@@ -90,6 +132,16 @@
 		D04EB0951AD3430800E57B02 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		D06021391B39211400C383EF /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		D060213B1B39211800C383EF /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		D06021411B39250000C383EF /* Remind Me Why WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Remind Me Why WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D06021441B39250000C383EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D06021451B39250000C383EF /* InterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterfaceController.h; sourceTree = "<group>"; };
+		D06021461B39250000C383EF /* InterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterfaceController.m; sourceTree = "<group>"; };
+		D06021481B39250000C383EF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		D060214C1B39250000C383EF /* Remind Me Why WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Remind Me Why WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D06021521B39250000C383EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D06021541B39250000C383EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		D06021561B39250000C383EF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		D06021621B39259D00C383EF /* American Captain.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "American Captain.otf"; sourceTree = "<group>"; };
 		D0A689AD1AD209E10017F0A7 /* Remind Me Why.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Remind Me Why.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0A689B11AD209E10017F0A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0A689B21AD209E10017F0A7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -127,13 +179,28 @@
 		D0A689F01AD24EDD0017F0A7 /* RedButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RedButton.png; sourceTree = "<group>"; };
 		D0A689F11AD24EDD0017F0A7 /* 3DRedButtonPressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3DRedButtonPressed.png; sourceTree = "<group>"; };
 		D0A689F21AD24EDD0017F0A7 /* lock-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lock-50.png"; sourceTree = "<group>"; };
+		D0D4B1951B3933DD00356A16 /* MediaToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaToolbox.framework; path = System/Library/Frameworks/MediaToolbox.framework; sourceTree = SDKROOT; };
+		D0D4B1971B3933E100356A16 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		D0D4B1991B3933ED00356A16 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		D0D4B19B1B3933F100356A16 /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		D060213E1B39250000C383EF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D0A689AA1AD209E10017F0A7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0D4B19C1B3933F100356A16 /* VideoToolbox.framework in Frameworks */,
+				D0D4B19A1B3933ED00356A16 /* CoreVideo.framework in Frameworks */,
+				D0D4B1981B3933E100356A16 /* CoreMedia.framework in Frameworks */,
+				D0D4B1961B3933DD00356A16 /* MediaToolbox.framework in Frameworks */,
 				D060213C1B39211800C383EF /* libsqlite3.dylib in Frameworks */,
 				D060213A1B39211400C383EF /* libz.dylib in Frameworks */,
 				D03CDA4A1AD98A3600F25929 /* Bolts.framework in Frameworks */,
@@ -166,9 +233,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D06021421B39250000C383EF /* Remind Me Why WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D06021451B39250000C383EF /* InterfaceController.h */,
+				D06021461B39250000C383EF /* InterfaceController.m */,
+				D06021481B39250000C383EF /* Images.xcassets */,
+				D06021431B39250000C383EF /* Supporting Files */,
+			);
+			path = "Remind Me Why WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		D06021431B39250000C383EF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D06021441B39250000C383EF /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D06021501B39250000C383EF /* Remind Me Why WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				D06021621B39259D00C383EF /* American Captain.otf */,
+				D06021531B39250000C383EF /* Interface.storyboard */,
+				D06021561B39250000C383EF /* Images.xcassets */,
+				D06021511B39250000C383EF /* Supporting Files */,
+			);
+			path = "Remind Me Why WatchKit App";
+			sourceTree = "<group>";
+		};
+		D06021511B39250000C383EF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D06021521B39250000C383EF /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		D0A689A41AD209E10017F0A7 = {
 			isa = PBXGroup;
 			children = (
+				D0D4B19B1B3933F100356A16 /* VideoToolbox.framework */,
+				D0D4B1991B3933ED00356A16 /* CoreVideo.framework */,
+				D0D4B1971B3933E100356A16 /* CoreMedia.framework */,
+				D0D4B1951B3933DD00356A16 /* MediaToolbox.framework */,
 				D060213B1B39211800C383EF /* libsqlite3.dylib */,
 				D06021391B39211400C383EF /* libz.dylib */,
 				D03CDA451AD98A3600F25929 /* Bolts.framework */,
@@ -190,6 +299,8 @@
 				D04EB0761AD2563000E57B02 /* AudioToolbox.framework */,
 				D0A689AF1AD209E10017F0A7 /* Remind Me Why */,
 				D0A689C91AD209E10017F0A7 /* Remind Me WhyTests */,
+				D06021421B39250000C383EF /* Remind Me Why WatchKit Extension */,
+				D06021501B39250000C383EF /* Remind Me Why WatchKit App */,
 				D0A689AE1AD209E10017F0A7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -199,6 +310,8 @@
 			children = (
 				D0A689AD1AD209E10017F0A7 /* Remind Me Why.app */,
 				D0A689C61AD209E10017F0A7 /* Remind Me WhyTests.xctest */,
+				D06021411B39250000C383EF /* Remind Me Why WatchKit Extension.appex */,
+				D060214C1B39250000C383EF /* Remind Me Why WatchKit App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -282,6 +395,39 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		D06021401B39250000C383EF /* Remind Me Why WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D060215E1B39250000C383EF /* Build configuration list for PBXNativeTarget "Remind Me Why WatchKit Extension" */;
+			buildPhases = (
+				D060213D1B39250000C383EF /* Sources */,
+				D060213E1B39250000C383EF /* Frameworks */,
+				D060213F1B39250000C383EF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D060214F1B39250000C383EF /* PBXTargetDependency */,
+			);
+			name = "Remind Me Why WatchKit Extension";
+			productName = "Remind Me Why WatchKit Extension";
+			productReference = D06021411B39250000C383EF /* Remind Me Why WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit-extension";
+		};
+		D060214B1B39250000C383EF /* Remind Me Why WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D060215B1B39250000C383EF /* Build configuration list for PBXNativeTarget "Remind Me Why WatchKit App" */;
+			buildPhases = (
+				D060214A1B39250000C383EF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Remind Me Why WatchKit App";
+			productName = "Remind Me Why WatchKit App";
+			productReference = D060214C1B39250000C383EF /* Remind Me Why WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp";
+		};
 		D0A689AC1AD209E10017F0A7 /* Remind Me Why */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D0A689D01AD209E10017F0A7 /* Build configuration list for PBXNativeTarget "Remind Me Why" */;
@@ -289,10 +435,12 @@
 				D0A689A91AD209E10017F0A7 /* Sources */,
 				D0A689AA1AD209E10017F0A7 /* Frameworks */,
 				D0A689AB1AD209E10017F0A7 /* Resources */,
+				D06021611B39250000C383EF /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				D06021591B39250000C383EF /* PBXTargetDependency */,
 			);
 			name = "Remind Me Why";
 			productName = "Remind Me Why";
@@ -326,6 +474,12 @@
 				LastUpgradeCheck = 0620;
 				ORGANIZATIONNAME = "Justin Lennox";
 				TargetAttributes = {
+					D06021401B39250000C383EF = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					D060214B1B39250000C383EF = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
 					D0A689AC1AD209E10017F0A7 = {
 						CreatedOnToolsVersion = 6.2;
 					};
@@ -350,11 +504,33 @@
 			targets = (
 				D0A689AC1AD209E10017F0A7 /* Remind Me Why */,
 				D0A689C51AD209E10017F0A7 /* Remind Me WhyTests */,
+				D06021401B39250000C383EF /* Remind Me Why WatchKit Extension */,
+				D060214B1B39250000C383EF /* Remind Me Why WatchKit App */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		D060213F1B39250000C383EF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D060214D1B39250000C383EF /* Remind Me Why WatchKit App.app in Resources */,
+				D06021491B39250000C383EF /* Images.xcassets in Resources */,
+				D06021651B39259D00C383EF /* American Captain.otf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D060214A1B39250000C383EF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D06021551B39250000C383EF /* Interface.storyboard in Resources */,
+				D06021571B39250000C383EF /* Images.xcassets in Resources */,
+				D06021661B39259D00C383EF /* American Captain.otf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D0A689AB1AD209E10017F0A7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -370,6 +546,7 @@
 				D0A689FE1AD24EDD0017F0A7 /* 3DYellowButton.png in Resources */,
 				D0A68A011AD24EDD0017F0A7 /* 3DRedButtonPressed.png in Resources */,
 				D0A689F41AD24EDD0017F0A7 /* camera-96.png in Resources */,
+				D06021631B39259D00C383EF /* American Captain.otf in Resources */,
 				D0A689F91AD24EDD0017F0A7 /* user-50.png in Resources */,
 				D0A689BE1AD209E10017F0A7 /* Images.xcassets in Resources */,
 				D04EB08D1AD259EB00E57B02 /* Settings-50.png in Resources */,
@@ -386,12 +563,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D06021641B39259D00C383EF /* American Captain.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		D060213D1B39250000C383EF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D06021471B39250000C383EF /* InterfaceController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D0A689A91AD209E10017F0A7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -418,6 +604,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		D060214F1B39250000C383EF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D060214B1B39250000C383EF /* Remind Me Why WatchKit App */;
+			targetProxy = D060214E1B39250000C383EF /* PBXContainerItemProxy */;
+		};
+		D06021591B39250000C383EF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D06021401B39250000C383EF /* Remind Me Why WatchKit Extension */;
+			targetProxy = D06021581B39250000C383EF /* PBXContainerItemProxy */;
+		};
 		D0A689C81AD209E10017F0A7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D0A689AC1AD209E10017F0A7 /* Remind Me Why */;
@@ -426,6 +622,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		D06021531B39250000C383EF /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D06021541B39250000C383EF /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
 		D0A689BA1AD209E10017F0A7 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -445,6 +649,72 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		D060215C1B39250000C383EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IBSC_MODULE = Remind_Me_Why_WatchKit_Extension;
+				INFOPLIST_FILE = "Remind Me Why WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Debug;
+		};
+		D060215D1B39250000C383EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				IBSC_MODULE = Remind_Me_Why_WatchKit_Extension;
+				INFOPLIST_FILE = "Remind Me Why WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Release;
+		};
+		D060215F1B39250000C383EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Remind Me Why WatchKit Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		D06021601B39250000C383EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Remind Me Why WatchKit Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		D0A689CE1AD209E10017F0A7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -538,7 +808,7 @@
 					"/Users/Justin/Downloads/parse-library",
 				);
 				INFOPLIST_FILE = "Remind Me Why/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -565,7 +835,7 @@
 					"/Users/Justin/Downloads/parse-library",
 				);
 				INFOPLIST_FILE = "Remind Me Why/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -614,6 +884,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		D060215B1B39250000C383EF /* Build configuration list for PBXNativeTarget "Remind Me Why WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D060215C1B39250000C383EF /* Debug */,
+				D060215D1B39250000C383EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D060215E1B39250000C383EF /* Build configuration list for PBXNativeTarget "Remind Me Why WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D060215F1B39250000C383EF /* Debug */,
+				D06021601B39250000C383EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		D0A689A81AD209E10017F0A7 /* Build configuration list for PBXProject "Remind Me Why" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

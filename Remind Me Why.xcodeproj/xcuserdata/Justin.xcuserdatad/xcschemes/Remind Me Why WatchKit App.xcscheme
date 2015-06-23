@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scheme
+   LastUpgradeVersion = "0630"
+   version = "1.3">
+   <BuildAction
+      parallelizeBuildables = "YES"
+      buildImplicitDependencies = "YES">
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "D060214B1B39250000C383EF"
+               BuildableName = "Remind Me Why WatchKit App.app"
+               BlueprintName = "Remind Me Why WatchKit App"
+               ReferencedContainer = "container:Remind Me Why.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "D06021401B39250000C383EF"
+               BuildableName = "Remind Me Why WatchKit Extension.appex"
+               BlueprintName = "Remind Me Why WatchKit Extension"
+               ReferencedContainer = "container:Remind Me Why.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "D0A689AC1AD209E10017F0A7"
+               BuildableName = "Remind Me Why.app"
+               BlueprintName = "Remind Me Why"
+               ReferencedContainer = "container:Remind Me Why.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
+   </BuildAction>
+   <TestAction
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      buildConfiguration = "Debug">
+      <Testables>
+      </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "D060214B1B39250000C383EF"
+            BuildableName = "Remind Me Why WatchKit App.app"
+            BlueprintName = "Remind Me Why WatchKit App"
+            ReferencedContainer = "container:Remind Me Why.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
+   </TestAction>
+   <LaunchAction
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      launchStyle = "0"
+      useCustomWorkingDirectory = "NO"
+      buildConfiguration = "Debug"
+      ignoresPersistentStateOnLaunch = "NO"
+      debugDocumentVersioning = "YES"
+      allowLocationSimulation = "YES">
+      <RemoteRunnable
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.springboard"
+         RemotePath = "/Remind Me Why">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "D060214B1B39250000C383EF"
+            BuildableName = "Remind Me Why WatchKit App.app"
+            BlueprintName = "Remind Me Why WatchKit App"
+            ReferencedContainer = "container:Remind Me Why.xcodeproj">
+         </BuildableReference>
+      </RemoteRunnable>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "D060214B1B39250000C383EF"
+            BuildableName = "Remind Me Why WatchKit App.app"
+            BlueprintName = "Remind Me Why WatchKit App"
+            ReferencedContainer = "container:Remind Me Why.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
+      <AdditionalOptions>
+      </AdditionalOptions>
+   </LaunchAction>
+   <ProfileAction
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      savedToolIdentifier = ""
+      useCustomWorkingDirectory = "NO"
+      buildConfiguration = "Release"
+      debugDocumentVersioning = "YES">
+      <RemoteRunnable
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.springboard"
+         RemotePath = "/Remind Me Why">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "D060214B1B39250000C383EF"
+            BuildableName = "Remind Me Why WatchKit App.app"
+            BlueprintName = "Remind Me Why WatchKit App"
+            ReferencedContainer = "container:Remind Me Why.xcodeproj">
+         </BuildableReference>
+      </RemoteRunnable>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "D060214B1B39250000C383EF"
+            BuildableName = "Remind Me Why WatchKit App.app"
+            BlueprintName = "Remind Me Why WatchKit App"
+            ReferencedContainer = "container:Remind Me Why.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
+   </ProfileAction>
+   <AnalyzeAction
+      buildConfiguration = "Debug">
+   </AnalyzeAction>
+   <ArchiveAction
+      buildConfiguration = "Release"
+      revealArchiveInOrganizer = "YES">
+   </ArchiveAction>
+</Scheme>

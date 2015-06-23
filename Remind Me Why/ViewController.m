@@ -22,33 +22,36 @@
     
     self.remindMeWhyButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     
-    self.remindMeWhyButton.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height * (3.00f/4.00f));
-    self.remindMeWhyButton.backgroundColor = [UIColor redColor];
+    self.remindMeWhyButton.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height * (3.50f/4.00f));
+    self.remindMeWhyButton.backgroundColor = [UIColor colorWithRed:(192.0f/255.0f) green:(57.0f/255.0f) blue:(43.0f/255.0f) alpha:1.0f];
     [self.remindMeWhyButton addTarget:self action:@selector(remindMeWhyButtonPressed) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.remindMeWhyButton];
     
-    self.setReminderButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    self.setReminderButton.frame = CGRectMake(0, CGRectGetMaxY(self.remindMeWhyButton.frame), self.view.frame.size.width, self.view.frame.size.height * (1.00f/4.00f));
+    self.setReminderButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    self.setReminderButton.frame = CGRectMake(0, CGRectGetMaxY(self.remindMeWhyButton.frame), self.view.frame.size.width, self.view.frame.size.height * (0.5f/4.00f));
+    self.setReminderButton.titleLabel.textColor = [UIColor whiteColor];
     [self.setReminderButton setTitle:@"Set Reminder" forState:UIControlStateNormal];
-    self.setReminderButton.backgroundColor = [UIColor yellowColor];
+    self.setReminderButton.backgroundColor = [UIColor colorWithRed:(187.0f/255.0f) green:(54.0f/255.0f) blue:(40.0f/255.0f) alpha:1.0f];
     [self.setReminderButton addTarget:self action:@selector(setReminderButtonPressed) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.setReminderButton];
     
-    self.remindMeWhyLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, self.remindMeWhyButton.frame.size.height / 4.00f, self.view.frame.size.width, self.remindMeWhyButton.frame.size.height/4.00f)];
-    self.remindMeWhyLabel.backgroundColor = [UIColor blackColor];
+    self.remindMeWhyLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, self.remindMeWhyButton.frame.size.height / 4.00f, self.view.frame.size.width - 10, self.remindMeWhyButton.frame.size.height/4.00f)];
     self.remindMeWhyLabel.text = @"REMIND ME WHY";
     self.remindMeWhyLabel.textColor = [UIColor whiteColor];
     self.remindMeWhyLabel.textAlignment = NSTextAlignmentCenter;
-    [self.remindMeWhyLabel setFont:[UIFont fontWithName:@"Helvetica" size:35.0f]];
+    [self.remindMeWhyLabel setFont:[UIFont fontWithName:@"American Captain" size:100.0f]];
+    self.remindMeWhyLabel.adjustsFontSizeToFitWidth = YES;
+    [self.remindMeWhyLabel setMinimumScaleFactor:0.2f/[UIFont labelFontSize]];
     [self.view addSubview:self.remindMeWhyLabel];
     
-    self.remindersPicker = [[UIPickerView alloc] initWithFrame: CGRectMake(CGRectGetMidX(self.view.frame)-self.remindersPicker.frame.size.width/2, CGRectGetMaxY(self.remindMeWhyLabel.frame) + 10, self.view.frame.size.width/1.100f, 25)];
-    self.remindersPicker.frame = CGRectMake(CGRectGetMidX(self.view.frame)-self.remindersPicker.frame.size.width/2, CGRectGetMaxY(self.remindMeWhyLabel.frame) + 10, self.view.frame.size.width/1.100f, 25);
+    self.remindersPicker = [[UIPickerView alloc] initWithFrame: CGRectMake(CGRectGetMidX(self.view.frame)-self.remindersPicker.frame.size.width/2, CGRectGetMaxY(self.remindMeWhyLabel.frame) + 10, self.view.frame.size.width/1.100f, 180.0f)];
+    self.remindersPicker.frame = CGRectMake(CGRectGetMidX(self.view.frame)-self.remindersPicker.frame.size.width/2, CGRectGetMaxY(self.remindMeWhyLabel.frame) + 10, self.view.frame.size.width/1.100f, 180.0f);
+
     self.remindersPicker.delegate = self;
     self.remindersPicker.userInteractionEnabled=YES;
     self.remindersPicker.showsSelectionIndicator = YES;
     
-    self.customSelector = [[UIImageView alloc] initWithFrame:CGRectMake(self.remindersPicker.frame.origin.x, CGRectGetMidY(self.remindersPicker.frame) - 12, self.remindersPicker.frame.size.width, 25)];
+    self.customSelector = [[UIImageView alloc] initWithFrame:CGRectMake(self.remindersPicker.frame.origin.x, CGRectGetMidY(self.remindersPicker.frame) - 15, self.remindersPicker.frame.size.width, 25.0f)];
     self.customSelector.backgroundColor = [UIColor whiteColor];
     self.customSelector.userInteractionEnabled = YES;
     
@@ -56,7 +59,7 @@
     [self.view addSubview:self.remindersPicker];
     
     self.settingsButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    self.settingsButton.frame = CGRectMake(10, 25, 30, 30);
+    self.settingsButton.frame = CGRectMake(15, 30, 30, 30);
     self.settingsButton.tintColor = [UIColor whiteColor];
     [self.settingsButton setImage:[UIImage imageNamed:@"Settings-50.png"] forState:UIControlStateNormal];
     [self.settingsButton addTarget:self action:@selector(settingsButtonPressed) forControlEvents:UIControlEventTouchUpInside];
@@ -72,6 +75,8 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated{
+    [[UIApplication sharedApplication] setStatusBarHidden:NO];
+
     [super viewWillAppear:animated];
     
 
@@ -181,15 +186,20 @@
 
 {
     NSLog(@"View for row");
+    [[[pickerView subviews] objectAtIndex:1] setHidden:TRUE];
+    [[[pickerView subviews] objectAtIndex:2] setHidden:TRUE];
+
     if(self.reminderListDictionary.count > 0){
-        UILabel *lbl = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 0.0f, [pickerView rowSizeForComponent:component].width, [pickerView rowSizeForComponent:component].height)];
+        UILabel *lbl = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, -5.0f, [pickerView rowSizeForComponent:component].width, [pickerView rowSizeForComponent:component].height)];
         lbl.text = [self.reminderListArray objectAtIndex:row];
+        [lbl setFont: [UIFont fontWithName:@"American Captain" size:25.0f]];
+        lbl.minimumScaleFactor = 0.5f/[UIFont labelFontSize];
         lbl.adjustsFontSizeToFitWidth = YES;
         lbl.textAlignment= NSTextAlignmentCenter;
-        lbl.font=[UIFont systemFontOfSize:20];
 
         return lbl;
     }else{
+        NSLog(@"AINT NOTHIN");
         return nil;
     }
 }

@@ -9,6 +9,10 @@
 #import "ThisIsWhyViewController.h"
 #import <QuartzCore/QuartzCore.h>
 #import <AVFoundation/AVFoundation.h>
+#import <MediaPlayer/MediaPlayer.h>
+#import <MediaPlayer/MediaPlayerDefines.h>
+#import <MediaPlayer/MPPlayableContentDataSource.h>
+
 
 @interface ThisIsWhyViewController ()
 
@@ -20,21 +24,22 @@
     NSLog(@"This is why view did load");
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = [UIColor blackColor];
+    self.view.backgroundColor = [UIColor blackColor];;
     
     self.thisIsWhyLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
     self.thisIsWhyLabel.text = @"THIS IS WHY";
     self.thisIsWhyLabel.textAlignment = NSTextAlignmentCenter;
-    self.thisIsWhyLabel.font = [UIFont fontWithName:@"Helvetica" size:35.00f];
+    self.thisIsWhyLabel.font = [UIFont fontWithName:@"American Captain" size:50.00f];
+    self.thisIsWhyLabel.adjustsFontSizeToFitWidth = YES;
     [[self.thisIsWhyLabel layer] setAnchorPoint:CGPointMake(0.0f, 0.0f)];
     [self.thisIsWhyLabel layer].position = CGPointMake(0, 0);
-    self.thisIsWhyLabel.textColor = [UIColor redColor];
+    self.thisIsWhyLabel.textColor = [UIColor whiteColor];
     
     self.thisIsWhyLabelBackground = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
-    self.thisIsWhyLabelBackground.backgroundColor = [UIColor whiteColor];
+    self.thisIsWhyLabelBackground.backgroundColor = [UIColor colorWithRed:(192.0f/255.0f) green:(57.0f/255.0f) blue:(43.0f/255.0f) alpha:1.0f];
     
     self.bottomBar = [[UIImageView alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height - 75, self.view.frame.size.width, 75)];
-    self.bottomBar.backgroundColor = [UIColor redColor];
+    self.bottomBar.backgroundColor = [UIColor colorWithRed:(192.0f/255.0f) green:(57.0f/255.0f) blue:(43.0f/255.0f) alpha:1.0f];
     
     self.backButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.backButton setFrame:CGRectMake(10, self.view.frame.size.height - 50, 50, 50)];
@@ -60,10 +65,11 @@
                                              selector:@selector(MPMoviePlayerPlaybackStateDidChange:)
                                                  name:MPMoviePlayerPlaybackStateDidChangeNotification
                                                object:nil];
-    
+    [self.moviePlayer prepareToPlay];
+
     self.reminderImageView = [[UIImageView alloc] init];
     
-    self.moviePlayer.view.alpha = 0.0f;
+    self.moviePlayer.view.frame = CGRectMake(0, 75, self.view.frame.size.width, CGRectGetMinY(self.bottomBar.frame) - 75);
     self.reminderImageView.alpha = 0.0f;
     
     [self.view addSubview:self.moviePlayer.view];
@@ -85,6 +91,8 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated{
+    [[UIApplication sharedApplication] setStatusBarHidden:YES];
+
     [super viewWillAppear:animated];
     self.currentReminderType = @"nil";
     NSLog(@"PFQuery this is why view will appear");
@@ -100,8 +108,10 @@
                 PFFile *file = [object objectForKey:@"file"];
                 NSURL *fileUrl = [NSURL URLWithString:file.url];
                 self.moviePlayer.contentURL = fileUrl;
-                NSLog(@"movie");
                 [self.moviePlayer prepareToPlay];
+                NSLog(@"movie");
+                self.moviePlayer.view.alpha = 1.0f;
+                [self.moviePlayer play];
             }else if([self.currentReminderType isEqualToString:@"picture"]){
                 NSLog(@"It's a picture");
                 [self.reminderImageView setFrame:CGRectMake(0, CGRectGetMaxY(self.thisIsWhyLabelBackground.frame), (self.view.frame.size.width), CGRectGetMinY(self.bottomBar.frame) - CGRectGetMaxY(self.thisIsWhyLabelBackground.frame))];
@@ -126,7 +136,7 @@
     [UIView animateWithDuration:0.5f delay:0.5f options:
      UIViewAnimationOptionCurveEaseIn animations:^{
          self.thisIsWhyLabelBackground.frame = CGRectMake(0, 0, self.view.frame.size.width, 75);
-         self.thisIsWhyLabel.frame = CGRectMake(0, 0, self.view.frame.size.width, 75);
+         self.thisIsWhyLabel.frame = CGRectMake(0, 5, self.view.frame.size.width, 75);
          
      } completion:^ (BOOL completed) {
          
@@ -213,17 +223,19 @@
     [UIView animateWithDuration:0.5f delay:0.0f options:
      UIViewAnimationOptionCurveEaseIn animations:^{
          self.thisIsWhyLabelBackground.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
-         self.thisIsWhyLabel.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
+         self.thisIsWhyLabel.frame = CGRectMake(0, 5, self.view.frame.size.width, self.view.frame.size.height);
          
      } completion:^ (BOOL completed) {
          [UIView animateWithDuration:0.5f delay:0.5f options:
           UIViewAnimationOptionCurveEaseIn animations:^{
               self.thisIsWhyLabelBackground.frame = CGRectMake(0, 0, self.view.frame.size.width, 75);
-              self.thisIsWhyLabel.frame = CGRectMake(0, 0, self.view.frame.size.width, 75);
+              self.thisIsWhyLabel.frame = CGRectMake(0, 5, self.view.frame.size.width, 75);
           } completion:nil];
      }];
     
 }
+
+
 
 
 /*
